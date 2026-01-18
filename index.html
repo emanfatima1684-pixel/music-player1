@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="music-player">
+        <div class="song-img-container">
+            <img src="e3c83020111f97c63a0faa0ff48ec92a.1000x1000x1.png" 
+                 class="song-img" id="songImg" alt="Song Image">
+        </div>
+
+        <h1 id="songTitle">Kamin</h1>
+        <p id="songArtist">Emin ft. Johny</p>
+
+        <audio id="song"></audio>
+
+        <div class="progress-container">
+            <div class="time-info">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+            <input type="range" value="0" id="progress">
+        </div>
+
+        <div class="controls">
+            <div onclick="backward()">
+                <i class="fa-solid fa-backward"></i>
+            </div>
+            <div onclick="playPause()">
+                <i class="fa-solid fa-play" id="ctrlIcon"></i>
+            </div>
+            <div onclick="forward()">
+                <i class="fa-solid fa-forward"></i>
+            </div>
+        </div>
+
+        <div class="volume-control">
+            <i class="fa-solid fa-volume-low"></i>
+            <input type="range" min="0" max="100" value="70" id="volume">
+            <i class="fa-solid fa-volume-high"></i>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
